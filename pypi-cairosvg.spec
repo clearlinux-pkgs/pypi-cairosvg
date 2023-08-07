@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-cairosvg
-Version  : 2.7.0
-Release  : 3
-URL      : https://files.pythonhosted.org/packages/a8/e1/a69d14425d125fcac173c68b445816d3a539bb95a09edd620108bdc9348e/CairoSVG-2.7.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/a8/e1/a69d14425d125fcac173c68b445816d3a539bb95a09edd620108bdc9348e/CairoSVG-2.7.0.tar.gz
+Version  : 2.7.1
+Release  : 4
+URL      : https://files.pythonhosted.org/packages/d5/e6/ec5900b724e3c44af7f6f51f719919137284e5da4aabe96508baec8a1b40/CairoSVG-2.7.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/d5/e6/ec5900b724e3c44af7f6f51f719919137284e5da4aabe96508baec8a1b40/CairoSVG-2.7.1.tar.gz
 Summary  : A Simple SVG Converter based on Cairo
 Group    : Development/Tools
 License  : LGPL-3.0 LGPL-3.0+
@@ -71,10 +71,10 @@ python3 components for the pypi-cairosvg package.
 
 
 %prep
-%setup -q -n CairoSVG-2.7.0
-cd %{_builddir}/CairoSVG-2.7.0
+%setup -q -n CairoSVG-2.7.1
+cd %{_builddir}/CairoSVG-2.7.1
 pushd ..
-cp -a CairoSVG-2.7.0 buildavx2
+cp -a CairoSVG-2.7.1 buildavx2
 popd
 
 %build
@@ -82,15 +82,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679411457
+export SOURCE_DATE_EPOCH=1691426813
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 

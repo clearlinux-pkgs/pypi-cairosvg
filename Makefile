@@ -1,5 +1,5 @@
 PKG_NAME := pypi-cairosvg
-URL = https://files.pythonhosted.org/packages/a8/e1/a69d14425d125fcac173c68b445816d3a539bb95a09edd620108bdc9348e/CairoSVG-2.7.0.tar.gz
+URL = https://files.pythonhosted.org/packages/d5/e6/ec5900b724e3c44af7f6f51f719919137284e5da4aabe96508baec8a1b40/CairoSVG-2.7.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
