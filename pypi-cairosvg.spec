@@ -5,7 +5,7 @@
 #
 Name     : pypi-cairosvg
 Version  : 2.7.1
-Release  : 5
+Release  : 6
 URL      : https://files.pythonhosted.org/packages/d5/e6/ec5900b724e3c44af7f6f51f719919137284e5da4aabe96508baec8a1b40/CairoSVG-2.7.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d5/e6/ec5900b724e3c44af7f6f51f719919137284e5da4aabe96508baec8a1b40/CairoSVG-2.7.1.tar.gz
 Summary  : A Simple SVG Converter based on Cairo
