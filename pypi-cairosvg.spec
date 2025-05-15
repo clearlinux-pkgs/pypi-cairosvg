@@ -6,10 +6,10 @@
 # autospec commit: 99a7985
 #
 Name     : pypi-cairosvg
-Version  : 2.8.1
-Release  : 10
-URL      : https://files.pythonhosted.org/packages/94/83/509a2c3c2e94897e5daa12250c97a49b04dec0183f4dde2e3b2d57646413/cairosvg-2.8.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/94/83/509a2c3c2e94897e5daa12250c97a49b04dec0183f4dde2e3b2d57646413/cairosvg-2.8.1.tar.gz
+Version  : 2.8.2
+Release  : 11
+URL      : https://files.pythonhosted.org/packages/ab/b9/5106168bd43d7cd8b7cc2a2ee465b385f14b63f4c092bb89eee2d48c8e67/cairosvg-2.8.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ab/b9/5106168bd43d7cd8b7cc2a2ee465b385f14b63f4c092bb89eee2d48c8e67/cairosvg-2.8.2.tar.gz
 Summary  : A Simple SVG Converter based on Cairo
 Group    : Development/Tools
 License  : LGPL-3.0 LGPL-3.0-or-later
@@ -73,10 +73,10 @@ python3 components for the pypi-cairosvg package.
 
 
 %prep
-%setup -q -n cairosvg-2.8.1
-cd %{_builddir}/cairosvg-2.8.1
+%setup -q -n cairosvg-2.8.2
+cd %{_builddir}/cairosvg-2.8.2
 pushd ..
-cp -a cairosvg-2.8.1 buildavx2
+cp -a cairosvg-2.8.2 buildavx2
 popd
 
 %build
@@ -84,7 +84,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1747232306
+export SOURCE_DATE_EPOCH=1747319562
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
